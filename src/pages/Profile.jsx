@@ -1,6 +1,21 @@
-
+import { useEffect } from "react";
 
 const Profile = () => {
+
+    // useEffect(() => {
+    //     fetch({
+    //         url: 'http://locallhost:3000/profile',
+    //         headers: {
+    //             'Authorization': 'Bearer <jeton du store>'
+    //         }
+    //     }).then(res => res.json())
+    //         .then(data => {
+    //             // Dispatch une action pour mettre à jour Nom & prénom de l'utilisateur
+    //         })
+    // })
+
+
+
     return (
         <main className="main bg-dark">
             <div className="header">
