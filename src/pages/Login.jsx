@@ -33,11 +33,9 @@ const Login = () => {
                     })
                         .then((res) => res.json())
                         .then((response) => {
-                            console.log(response.body)
                             //set redux store user infos
                             dispatch(authActions.login(response.body))
                         })
-
                     //redirect to profile page
                     navigate('/profile')
                 }
