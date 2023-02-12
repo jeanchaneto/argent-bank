@@ -24,7 +24,7 @@ const Login = () => {
                 if (response.body.token) {
                     //set token in redux store
                     dispatch(authActions.setToken(response.body.token));
-                    //get user data from API
+                    //get user profile data from API
                     fetch('http://localhost:3001/api/v1/user/profile', {
                         method: 'POST',
                         headers: {

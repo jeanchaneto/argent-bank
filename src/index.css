@@ -60,6 +60,7 @@ main {
 .main-nav-item {
   text-decoration: none;
   margin-right: 0.5rem;
+  padding-left: 16px;
 }
 
 .main-nav-item:hover {
@@ -265,6 +266,33 @@ main {
   padding: 10px;
 }
 
+.name-edit-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.edit-input {
+  padding: 8px;
+}
+
+.edit-buttons-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-name-button{
+  width: 100px;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px;
+}
+
+
 .header {
   color: #fff;
   margin-bottom: 2rem;
@@ -282,6 +310,16 @@ main {
   color: #fff;
 }
 
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 720px) {
   .account {
     flex-direction: row;
@@ -295,3 +333,4 @@ main {
     width: 200px;
   }
 }
+
