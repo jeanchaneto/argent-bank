@@ -11,19 +11,6 @@ const Profile = () => {
     const lastName = useSelector((state) => state.authReducer.lastName);
     const token = useSelector((state) => state.authReducer.token);
 
-    // useEffect(() => {
-    //     fetch({
-    //         url: 'http://localhost:3001/api/v1/user/profile',
-    //         method: 'PUT',
-    //         headers: {
-    //             'Authorization': `Bearer ${token}`
-    //         }
-    //     }).then(res => res.json())
-    //         .then(data => {
-    //             // Dispatch une action pour mettre à jour Nom & prénom de l'utilisateur
-    //         })
-    // })
-
     const saveNewName = (e) => {
         e.preventDefault()
         
@@ -31,20 +18,19 @@ const Profile = () => {
             url: 'http://localhost:3001/api/v1/user/profile',
             method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             },
-            body: ({
-                "firstName": newFirstName,
-                "lastName": newLastName
+            body: JSON.stringify({
+                firstName: newFirstName,
+                lastName: newLastName
             })
-
-
         }).then(res => res.json())
             .then(data => {
-                console.log(data)
+                console.log(data);
+                dispatch(authActions.updateName(data.body));
+                setIsEditingName(false);
             })
-            // .catch((err) => console.log(err))
+            .catch((err) => console.log(err))
     }
 
     return (

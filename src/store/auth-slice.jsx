@@ -21,6 +21,10 @@ const authSlice = createSlice({
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
         },
+        updateName(state,action) {
+            state.firstName = action.payload.firstName;
+            state.lastName = action.payload.lastName;
+        },
         logout(state) {
             state.isAuthenticated = false;
             state.firstName = null;
