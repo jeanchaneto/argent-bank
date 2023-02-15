@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { authActions } from '../store/auth-slice';
 
@@ -13,11 +13,12 @@ const Profile = () => {
 
     const saveNewName = (e) => {
         e.preventDefault()
-        
-        fetch({
-            url: 'http://localhost:3001/api/v1/user/profile',
+
+        fetch('http://localhost:3001/api/v1/user/profile', {
+            
             method: 'PUT',
             headers: {
+                'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
             },
             body: JSON.stringify({
