@@ -29,12 +29,15 @@ const Nav = () => {
           <i className="fa fa-user-circle"></i>
           {firstName}
         </NavLink>
-        <NavLink to="./" className="main-nav-item" onClick={logout}>
+        <NavLink to="./"
+          className="main-nav-item"
+          onClick={logout}>
           <i className="fa fa-sign-out"></i>
           Sign Out
         </NavLink>
       </div> : <div>
-        <NavLink to="./login" className="main-nav-item" >
+        <NavLink to="./login"
+          className="main-nav-item" >
           <i className="fa fa-user-circle"></i>
           Sign In
         </NavLink>

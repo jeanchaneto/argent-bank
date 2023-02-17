@@ -15,7 +15,7 @@ const Profile = () => {
         e.preventDefault()
 
         fetch('http://localhost:3001/api/v1/user/profile', {
-            
+
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -72,7 +72,8 @@ const Profile = () => {
                         />
                     </div>
                     <div className="edit-buttons-container">
-                        <button className="edit-name-button" onClick={saveNewName}   >
+                        <button className="edit-name-button"
+                            onClick={saveNewName}   >
                             Save
                         </button>
                         <button
